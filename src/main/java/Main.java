@@ -4,7 +4,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner number = new Scanner(System.in);
         int num;
+        double numDouble;
 
+        // Практика Java. Классы и методы. #1
+        System.out.println("Вывод дробной части числа.");
+        System.out.println("Введите вещественное число:");
+        numDouble = number.nextDouble();
+
+        System.out.println("Дробная часть, с округлением до 3 знаков: " + Logics.fraction(numDouble));
+        System.out.println();
+
+        // Практика Java. Классы и методы. #5
         System.out.println("Проверка, двузначное ли число.");
         System.out.println("Введите положительное число:");
         num = number.nextInt();
