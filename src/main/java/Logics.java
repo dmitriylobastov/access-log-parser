@@ -7,4 +7,10 @@ public class Logics {
         }
         else return false;
     }
+
+    public static double fraction(double x){
+        int intX = (int)x;
+        double x3F = Double.parseDouble(String.format("%.3f", x).replace(',', '.'));
+        return x3F - intX;
+    }
 }
