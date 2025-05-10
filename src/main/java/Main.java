@@ -5,19 +5,19 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // Практика Java. Классы и методы. #1
-        System.out.println("Вывод дробной части числа.");
+        System.out.println("Получение дробной части числа.");
         System.out.println("Введите вещественное число:");
-        double numDouble = scanner.nextDouble();
+        double scannerDouble = scanner.nextDouble();
 
-        System.out.println("Дробная часть, с округлением до 3 знаков: " + Logics.fraction(numDouble));
-        System.out.println();
+        System.out.print("Дробная часть числа, 3 знака после запятой: ");
+        System.out.printf("%.3f%n%n", Logics.fraction(scannerDouble));
 
         // Практика Java. Классы и методы. #5
         System.out.println("Проверка, двузначное ли число.");
         System.out.println("Введите положительное число:");
-        int num = scanner.nextInt();
+        int scannerInt = scanner.nextInt();
 
-        if (Logics.is2Digits(num)) {
+        if (Logics.is2Digits(scannerInt)) {
             System.out.println("Число двузначное");
         }
         else {
