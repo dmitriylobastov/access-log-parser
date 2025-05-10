@@ -12,10 +12,21 @@ public class Main {
         System.out.print("Дробная часть числа, 3 знака после запятой: ");
         System.out.printf("%.3f%n%n", Logics.fraction(scannerDouble));
 
+        // Практика Java. Классы и методы. #2
+        System.out.println("Сложение двух последних знаков.");
+        System.out.println("Введите целое число не менее 2х знаков:");
+        int scannerInt = scanner.nextInt();
+
+        if (scannerInt/10 !=0) {
+            System.out.println("Сумма двух последних чисел: " + Logics.sumLastNums(scannerInt));
+        }
+        else System.out.println("Вы ввели число менее 2х знаков!");
+        System.out.println();
+
         // Практика Java. Классы и методы. #5
         System.out.println("Проверка, двузначное ли число.");
         System.out.println("Введите положительное число:");
-        int scannerInt = scanner.nextInt();
+        scannerInt = scanner.nextInt();
 
         if (Logics.is2Digits(scannerInt)) {
             System.out.println("Число двузначное");

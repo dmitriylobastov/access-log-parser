@@ -11,4 +11,8 @@ public class Logics {
     public static double fraction(double x){
         return x-(int)x;
     }
+
+    public static int sumLastNums(int x){
+        return Math.abs(x%100/10+x%10);
+    }
 }
