@@ -15,4 +15,8 @@ public class Logics {
     public static int sumLastNums(int x){
         return Math.abs(x%100/10+x%10);
     }
+
+    public static int charToNum(char x){
+        return x-48;
+    }
 }

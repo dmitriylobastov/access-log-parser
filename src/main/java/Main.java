@@ -23,6 +23,21 @@ public class Main {
         else System.out.println("Вы ввели число менее 2х знаков!");
         System.out.println();
 
+        // Практика Java. Классы и методы. #3
+        System.out.println("Вывод чисел от 0 до 9.");
+        System.out.println("Введите число от 0 до 9:");
+        String scannerString = scanner.next();
+        int resultCharToNum = Logics.charToNum(scannerString.charAt(0));
+        if (scannerString.length() == 1 && (resultCharToNum >=0 && resultCharToNum <=9)) {
+            System.out.println("Вы ввели число: " + resultCharToNum);
+        }
+        else {
+            System.out.println("Вы ввели не число от 0 до 9.");
+        }
+        System.out.println();
+
+        // Практика Java. Классы и методы. #4
+
         // Практика Java. Классы и методы. #5
         System.out.println("Проверка, двузначное ли число.");
         System.out.println("Введите положительное число:");
