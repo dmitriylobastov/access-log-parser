@@ -33,4 +33,8 @@ public class Logics {
             return num >= a && num <= b;
         } else return num >= b && num <= a;
     }
+
+    public static boolean isDivisor (int a, int b){
+        return a%b==0 || b%a==0;
+    }
 }

@@ -91,6 +91,22 @@ public class Main {
 
         System.out.println();
 
+        // Практика Java. Классы и методы. #7
+        System.out.println("Проверка, делит ли любое число на другое нацело");
+        System.out.println("Введите одно целое число a:");
+        scannerIntA = scanner.nextInt();
+        System.out.println("Введите другое целое число b:");
+        scannerIntB = scanner.nextInt();
+
+        if (Logics.isDivisor(scannerIntA, scannerIntB) && scannerIntA !=0 && scannerIntB !=0) {
+            System.out.println("Одно любое число делится на другое без остатка");
+        }
+        else {
+            System.out.println("Одно любое число на другое без остатка не делится, либо одно или оба числа это ноль ");
+        }
+
+        System.out.println();
+
 
         /*
         System.out.println("Введите первое число:");
