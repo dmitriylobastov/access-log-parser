@@ -27,4 +27,10 @@ public class Logics {
     public static boolean isUpperCase(char x){
         return x >64 && x <91;
     }
+
+    public static boolean isInRange(int a, int b, int num){
+        if (a <= b) {
+            return num >= a && num <= b;
+        } else return num >= b && num <= a;
+    }
 }
