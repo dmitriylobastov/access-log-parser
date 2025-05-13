@@ -23,4 +23,8 @@ public class Logics {
     public static boolean isPositive(int x){
         return x >0;
     }
+
+    public static boolean isUpperCase(char x){
+        return x >64 && x <91;
+    }
 }
