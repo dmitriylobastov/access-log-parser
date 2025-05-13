@@ -74,6 +74,22 @@ public class Main {
         System.out.println();
 
         // Практика Java. Классы и методы. #7
+        System.out.println("Проверка, входит ли num в диапазон числового ряда [a и b] включая границы.");
+        System.out.println("Введите первое целое число a:");
+        int scannerIntA = scanner.nextInt();
+        System.out.println("Введите второе целое число b:");
+        int scannerIntB = scanner.nextInt();
+        System.out.println("Введите целое число num:");
+        int scannerIntNum = scanner.nextInt();
+
+        if (Logics.isInRange(scannerIntA, scannerIntB, scannerIntNum)) {
+            System.out.println("Num входит в диапазон числового ряда [a и b]");
+        }
+        else {
+            System.out.println("Num в диапазон числового ряда [a и b] не входит");
+        }
+
+        System.out.println();
 
 
         /*
