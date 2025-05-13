@@ -19,4 +19,8 @@ public class Logics {
     public static int charToNum(char x){
         return x-48;
     }
+
+    public static boolean isPositive(int x){
+        return x >0;
+    }
 }
