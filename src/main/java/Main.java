@@ -37,6 +37,16 @@ public class Main {
         System.out.println();
 
         // Практика Java. Классы и методы. #4
+        System.out.println("Проверка, пложительное ли число.");
+        System.out.println("Введите целое число:");
+        scannerInt = scanner.nextInt();
+        if (Logics.isPositive(scannerInt)) {
+            System.out.println("Число положительное");
+        }
+        else {
+            System.out.println("Число отрицательное или 0");
+        }
+        System.out.println();
 
         // Практика Java. Классы и методы. #5
         System.out.println("Проверка, двузначное ли число.");
