@@ -60,6 +60,21 @@ public class Main {
             System.out.println("Число не является положительным и двузначным");
         }
 
+        // Практика Java. Классы и методы. #6
+        System.out.println("Проверка, большая ли буква в диапазоне от 'A' до 'Z'");
+        System.out.println("Введите один символ");
+        scannerString = scanner.next();
+        boolean resultIsUpperCase = Logics.isUpperCase(scannerString.charAt(0));
+        if (scannerString.length() == 1 && resultIsUpperCase) {
+            System.out.println("Вы ввели большую ли букву в диапазоне от 'A' до 'Z'");
+        }
+        else {
+            System.out.println("Введеный текст не является большой буквой в диапазоне от 'A' до 'Z'");
+        }
+        System.out.println();
+
+        // Практика Java. Классы и методы. #7
+
 
         /*
         System.out.println("Введите первое число:");
