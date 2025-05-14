@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 public class Tasks {
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -9,7 +8,6 @@ public class Tasks {
         System.out.println("Получение дробной части числа.");
         System.out.println("Введите вещественное число:");
         double scannerDouble = scanner.nextDouble();
-
         System.out.print("Дробная часть числа, 3 знака после запятой: ");
         System.out.printf("%.3f%n%n", Logics.fraction(scannerDouble));
     }
@@ -23,22 +21,20 @@ public class Tasks {
         if (scannerInt / 10 != 0) {
             System.out.println("Сумма двух последних чисел: " + Logics.sumLastNums(scannerInt));
         } else System.out.println("Вы ввели число менее 2х знаков!");
-        System.out.println();
     }
 
     public static void task3() {
         // Практика Java. Классы и методы. #3
-
         System.out.println("Вывод чисел от 0 до 9.");
         System.out.println("Введите число от 0 до 9:");
         String scannerString = scanner.next();
         int resultCharToNum = Logics.charToNum(scannerString.charAt(0));
+
         if (scannerString.length() == 1 && (resultCharToNum >= 0 && resultCharToNum <= 9)) {
             System.out.println("Вы ввели число: " + resultCharToNum);
         } else {
             System.out.println("Вы ввели не число от 0 до 9.");
         }
-        System.out.println();
     }
 
     public static void task4() {
@@ -46,12 +42,12 @@ public class Tasks {
         System.out.println("Проверка, пложительное ли число.");
         System.out.println("Введите целое число:");
         int scannerInt = scanner.nextInt();
+
         if (Logics.isPositive(scannerInt)) {
             System.out.println("Число положительное");
         } else {
             System.out.println("Число отрицательное или 0");
         }
-        System.out.println();
     }
 
     public static void task5() {
@@ -69,16 +65,16 @@ public class Tasks {
 
     public static void task6() {
         // Практика Java. Классы и методы. #6
-        System.out.println("Проверка, большая ли буква в диапазоне от 'A' до 'Z'");
-        System.out.println("Введите один символ");
+        System.out.println("Проверка, большая ли буква в диапазоне от 'A' до 'Z'.");
+        System.out.println("Введите один символ:");
         String scannerString = scanner.next();
         boolean resultIsUpperCase = Logics.isUpperCase(scannerString.charAt(0));
+
         if (scannerString.length() == 1 && resultIsUpperCase) {
             System.out.println("Вы ввели большую ли букву в диапазоне от 'A' до 'Z'");
         } else {
             System.out.println("Введеный текст не является большой буквой в диапазоне от 'A' до 'Z'");
         }
-        System.out.println();
     }
 
     public static void task7() {
@@ -96,13 +92,11 @@ public class Tasks {
         } else {
             System.out.println("Num в диапазон числового ряда [a и b] не входит");
         }
-
-        System.out.println();
     }
 
     public static void task8() {
         // Практика Java. Классы и методы. #8
-        System.out.println("Проверка, делит ли любое число на другое нацело");
+        System.out.println("Проверка, делит ли любое число на другое нацело.");
         System.out.println("Введите одно целое число a:");
         int scannerIntA = scanner.nextInt();
         System.out.println("Введите другое целое число b:");
@@ -113,10 +107,24 @@ public class Tasks {
         } else {
             System.out.println("Одно любое число на другое без остатка не делится, либо одно или оба числа это ноль ");
         }
-
-        System.out.println();
     }
 
+    public static void task9() {
+        // Практика Java. Классы и методы. #9
+        System.out.println("Проверка, что все три числа равны.");
+        System.out.println("Введите первое целое число a:");
+        int scannerIntA = scanner.nextInt();
+        System.out.println("Введите второе целое число b:");
+        int scannerIntB = scanner.nextInt();
+        System.out.println("Введите третье целое число b:");
+        int scannerIntC = scanner.nextInt();
+
+        if (Logics.isEqual(scannerIntA, scannerIntB, scannerIntC)) {
+            System.out.println("Все три числа равны");
+        } else {
+            System.out.println("Три числа между собой не равны");
+        }
+    }
 
         /*
         System.out.println("Введите первое число:");
