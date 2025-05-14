@@ -126,6 +126,19 @@ public class Tasks {
         }
     }
 
+    public static void task10() {
+        // Практика Java. Классы и методы. #10
+        System.out.println("Последовательное сложение остатка от деления на десять у пяти чисел.");
+        System.out.println("Необходимо последовательно ввести пять чисел.");
+        System.out.println("Введите по очереди 5 целых чисел:");
+        int result = scanner.nextInt();
+
+        for (int i = 0; i < 4; i++) {
+            result = Logics.lastNumSum(result, scanner.nextInt());
+        }
+        System.out.println("Итого: " + result);
+    }
+
         /*
         System.out.println("Введите первое число:");
         int firstNumber = scanner.nextInt();
