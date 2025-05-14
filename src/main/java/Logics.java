@@ -40,4 +40,8 @@ public class Logics {
     public static boolean isEqual(int a, int b, int c) {
         return a == b && a == c;
     }
+
+    public static int lastNumSum(int a, int b) {
+        return (a % 10) + (b % 10);
+    }
 }

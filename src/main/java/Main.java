@@ -15,6 +15,7 @@ public class Main {
         System.out.println("Задача 7. Проверка, входит ли num в диапазон числового ряда [a и b] включая границы.");
         System.out.println("Задача 8. Проверка, делит ли любое число на другое нацело.");
         System.out.println("Задача 9. Проверка, что все три числа равны.");
+        System.out.println("Задача 10. Последовательное сложение остатка от деления на десять у пяти чисел.");
         System.out.println();
         System.out.println("Для запуска задачи ведите её номер: ");
 
@@ -47,6 +48,9 @@ public class Main {
                 break;
             case 9:
                 Tasks.task9();
+                break;
+            case 10:
+                Tasks.task10();
                 break;
             default:
                 System.out.println("Задача с таким номером отсутствует");
