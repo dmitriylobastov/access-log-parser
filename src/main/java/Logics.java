@@ -1,0 +1,47 @@
+public class Logics {
+    public static boolean is2Digits(int x) {
+        boolean notPosX = Integer.toString(x).startsWith("-");
+        if (!notPosX) {
+            int lengthX = Integer.toString(x).length();
+            return lengthX == 2;
+        } else return false;
+    }
+
+    public static double fraction(double x) {
+        return x - (int) x;
+    }
+
+    public static int sumLastNums(int x) {
+        return Math.abs(x % 100 / 10 + x % 10);
+    }
+
+    public static int charToNum(char x) {
+        return x - 48;
+    }
+
+    public static boolean isPositive(int x) {
+        return x > 0;
+    }
+
+    public static boolean isUpperCase(char x) {
+        return x > 64 && x < 91;
+    }
+
+    public static boolean isInRange(int a, int b, int num) {
+        if (a <= b) {
+            return num >= a && num <= b;
+        } else return num >= b && num <= a;
+    }
+
+    public static boolean isDivisor(int a, int b) {
+        return a % b == 0 || b % a == 0;
+    }
+
+    public static boolean isEqual(int a, int b, int c) {
+        return a == b && a == c;
+    }
+
+    public static int lastNumSum(int a, int b) {
+        return (a % 10) + (b % 10);
+    }
+}
