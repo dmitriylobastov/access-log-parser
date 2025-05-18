@@ -4,6 +4,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        Logics.guessGame();
+
+        System.out.println("///");
+
+        /*
         // Практика Java. Классы и методы.
         System.out.println("Практика Java. Классы и методы.");
         System.out.println("Задача 1. Получение дробной части числа.");
@@ -18,6 +23,8 @@ public class Main {
         System.out.println("Задача 10. Последовательное сложение остатка от деления на десять у пяти чисел.");
         System.out.println();
         System.out.println("Для запуска задачи ведите её номер: ");
+
+         */
 
         int scannerInt = scanner.nextInt();
 

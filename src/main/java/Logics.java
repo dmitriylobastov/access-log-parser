@@ -44,4 +44,200 @@ public class Logics {
     public static int lastNumSum(int a, int b) {
         return (a % 10) + (b % 10);
     }
+
+    // Условия
+    public static int abs(int x) {
+        if (x > 0) return x;
+        return -x;
+    }
+
+    public static int safeDiv(int x, int y) {
+        if (y == 0) return 0;
+        return x / y;
+    }
+
+    public static int max(int x, int y) {
+        if (x > y) return x;
+        return y;
+    }
+
+    public static String makeDecision(int x, int y) {
+        if (x > y) return x + ">" + y;
+        if (x < y) return x + "<" + y;
+        return x + "==" + y;
+    }
+
+    public static int max3(int x, int y, int z) {
+        if (x > y && x > z) return x;
+        if (y > z) return y;
+        return z;
+    }
+
+    public static boolean sum3(int x, int y, int z) {
+        if (x + y == z) return true;
+        if (x + z == y) return true;
+        return y + z == x;
+    }
+
+    public static int sum2(int x, int y) {
+        if (x + y > 9 && x + y < 20) return 20;
+        return x + y;
+    }
+
+    public static boolean is35(int x) {
+        if (x % 3 == 0 && x % 5 == 0) return false;
+        return x % 3 == 0 || x % 5 == 0;
+    }
+
+    public static boolean magic6(int x, int y) {
+        if (x == 6 || y == 6) return true;
+        if (x + y == 6) return true;
+        return x - y == 6 || y - x == 6;
+    }
+
+    public static String age(int x) {
+        if (x % 100 != 11 && x % 10 == 1) return x + " год";
+        if (x % 100 != 12 && x % 10 == 2) return x + " года";
+        if (x % 100 != 13 && x % 10 == 3) return x + " года";
+        if (x % 100 != 14 && x % 10 == 4) return x + " года";
+        return x + " лет";
+    }
+
+    public static String day(int x) {
+        switch (x) {
+            case 1:
+                return "понедельник";
+            case 2:
+                return "вторник";
+            case 3:
+                return "среда";
+            case 4:
+                return "четверг";
+            case 5:
+                return "пятница";
+            case 6:
+                return "суббота";
+            case 7:
+                return "воскресенье";
+            default:
+                return "это не день недели";
+        }
+    }
+
+    public static void printDays(String x) {
+        switch (x) {
+            case "понедельник":
+                System.out.println("понедельник");
+            case "вторник":
+                System.out.println("вторник");
+            case "среда":
+                System.out.println("среда");
+            case "четверг":
+                System.out.println("четверг");
+            case "пятница":
+                System.out.println("пятница");
+            case "суббота":
+                System.out.println("суббота");
+            case "воскресенье":
+                System.out.println("воскресенье");
+                break;
+            default:
+                System.out.println("это не день недели");
+        }
+    }
+
+    public static String listNums(int x) {
+        String num = "";
+        for (int i = 0; i <= x; i++) {
+            num += i + " ";
+        }
+        return num;
+    }
+
+    public static String reverseListNums(int x) {
+        String num = "";
+        for (int i = x; i >= 0; i--) {
+            num += i + " ";
+        }
+        return num;
+    }
+
+    public static String chet(int x) {
+        String num = "";
+        for (int i = 0; i <= x; i += 2) {
+            num += i + " ";
+        }
+        return num;
+    }
+
+    public static int pow(int x, int y) {
+        int res = 1;
+        for (int i = 1; i <= y; i++) {
+            res *= x;
+        }
+        return res;
+    }
+
+    public static int numLen(long x) {
+        int count = 0;
+        do {
+            x /= 10;
+            count++;
+        } while (x > 0);
+        return count;
+    }
+
+    public static boolean equalNum(int x) {
+        int firstNum = x % 10;
+        do {
+            if (x % 10 != firstNum) return false;
+            x /= 10;
+        } while (x > 0);
+        return true;
+    }
+
+    public static void square(int x) {
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < x; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void leftTriangle(int x) {
+        for (int i = 1; i <= x; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void rightTriangle(int x) {
+        for (int i = 1; i <= x; i++) {
+            for (int j = x; j > 0; j--) {
+                if (j > i) System.out.print(" ");
+                else System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void guessGame() {
+        int randomNum = 3, x, count = 0;
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+        System.out.println("What number am I thinking (0 to 9)? :");
+        do {
+            x = sc.nextInt();
+            if (x != randomNum) {
+                System.out.println("No, try again");
+            } else {
+                System.out.println("Yes, it`s " + randomNum);
+            }
+            count++;
+        } while (x != randomNum);
+        System.out.println("Количество попыток: " + count);
+    }
+
 }
