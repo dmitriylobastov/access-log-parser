@@ -3,57 +3,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите первое число:");
+        int firstNumber = scanner.nextInt();
+        System.out.println("Введите второе число:");
+        int secondNumber = scanner.nextInt();
 
-        // Практика Java. Классы и методы.
-        System.out.println("Практика Java. Классы и методы.");
-        System.out.println("Задача 1. Получение дробной части числа.");
-        System.out.println("Задача 2. Сложение двух последних знаков.");
-        System.out.println("Задача 3. Вывод чисел от 0 до 9.");
-        System.out.println("Задача 4. Проверка, пложительное ли число.");
-        System.out.println("Задача 5. Проверка, двузначное ли число.");
-        System.out.println("Задача 6. Проверка, большая ли буква в диапазоне от 'A' до 'Z'.");
-        System.out.println("Задача 7. Проверка, входит ли num в диапазон числового ряда [a и b] включая границы.");
-        System.out.println("Задача 8. Проверка, делит ли любое число на другое нацело.");
-        System.out.println("Задача 9. Проверка, что все три числа равны.");
-        System.out.println("Задача 10. Последовательное сложение остатка от деления на десять у пяти чисел.");
-        System.out.println();
-        System.out.println("Для запуска задачи ведите её номер: ");
+        int sum = firstNumber+secondNumber;
+        int diff = firstNumber-secondNumber;
+        int  prod = firstNumber*secondNumber;
+        double  priv = (double) firstNumber/secondNumber;
 
-        int scannerInt = scanner.nextInt();
-
-        switch (scannerInt) {
-            case 1:
-                Tasks.task1();
-                break;
-            case 2:
-                Tasks.task2();
-                break;
-            case 3:
-                Tasks.task3();
-                break;
-            case 4:
-                Tasks.task4();
-                break;
-            case 5:
-                Tasks.task5();
-                break;
-            case 6:
-                Tasks.task6();
-                break;
-            case 7:
-                Tasks.task7();
-                break;
-            case 8:
-                Tasks.task8();
-                break;
-            case 9:
-                Tasks.task9();
-                break;
-            case 10:
-                Tasks.task10();
-                break;
-            default:
-                System.out.println("Задача с таким номером отсутствует");
-        }
+        System.out.println("Сумма: " + sum);
+        System.out.println("Разность: " + diff);
+        System.out.println("Произведение: " + prod);
+        System.out.println("Частное: " + priv);
     }
 }
