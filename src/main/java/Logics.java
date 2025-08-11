@@ -1,4 +1,129 @@
+import java.util.Arrays;
+
 public class Logics {
+    public static int[] add(int[] arr, int[] ins, int pos) {
+        int[] newArr = new int[arr.length + ins.length];
+        int count = 0;
+        for (; count < pos; ) {
+            newArr[count] = arr[count++];
+        }
+        for (int i = 0; i < ins.length; ) {
+            newArr[count++] = ins[i++];
+        }
+        for (int j = pos; count < newArr.length; ) {
+            newArr[count++] = arr[j++];
+        }
+        return newArr;
+    }
+
+    public static int[] add2(int[] arr, int x, int pos) {
+        int[] newArr = new int[arr.length + 1];
+        for (int i = 0; i < pos; i++) {
+            newArr[i] = arr[i];
+        }
+        newArr[pos] = x;
+        for (int i = pos + 1, j = pos; i < newArr.length; i++, j++) {
+            newArr[i] = arr[j];
+        }
+        return newArr;
+    }
+
+    public static int[] deleteNegative(int[] arr) {
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] >= 0) count++;
+        }
+        int[] newArr = new int[count];
+        for (int i = 0, j = 0; i < arr.length; i++) {
+            if (arr[i] >= 0) {
+                newArr[j] = arr[i];
+                j++;
+            }
+        }
+        return newArr;
+    }
+
+    public static int[] findAll(int[] arr, int x) {
+        int[] newArr = new int[arr.length];
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x) {
+                newArr[count++] = i;
+            }
+        }
+        int[] finalArr = new int[count];
+        for (int j = 0; j < finalArr.length; j++) {
+            finalArr[j] = newArr[j];
+        }
+        return finalArr;
+    }
+
+    public static int[] concat(int[] arr1, int[] arr2) {
+        int[] newArr = new int[arr1.length + arr2.length];
+        for (int i = 0; i < arr1.length; i++) {
+            newArr[i] = arr1[i];
+        }
+        for (int i = arr1.length, j = 0; i < newArr.length; i++, j++) {
+            newArr[i] = arr2[j];
+        }
+        return newArr;
+    }
+
+    public static int[] reverseBack(int[] arr) {
+        int[] newArr = new int[arr.length];
+        for (int i = 0, j = arr.length - 1; i < arr.length; i++, j--) {
+            newArr[i] = arr[j];
+        }
+        return newArr;
+    }
+
+    public static void reverse(int[] arr) {
+        int[] newArr = new int[arr.length];
+        for (int i = 0, j = arr.length - 1; i < arr.length; i++, j--) {
+            newArr[i] = arr[j];
+        }
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = newArr[i];
+        }
+    }
+
+    public static boolean palindrom(int[] arr) {
+        for (int i = 0, j = arr.length - 1; i < arr.length; i++, j--) {
+            if (arr[i] != arr[j]) return false;
+        }
+        return true;
+    }
+
+    public static int countPositive(int[] arr) {
+        int countPos = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) countPos++;
+        }
+        return countPos;
+    }
+
+    public static int maxAbs(int[] arr) {
+        int maxArr = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (abs(arr[i]) > abs(maxArr)) maxArr = arr[i];
+        }
+        return maxArr;
+    }
+
+    public static int findLast(int[] arr, int x) {
+        for (int i = arr.length - 1; i >= 0; i--) {
+            if (arr[i] == x) return i;
+        }
+        return -1;
+    }
+
+    public static int findFirst(int[] arr, int x) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x) return i;
+        }
+        return -1;
+    }
+
     public static boolean is2Digits(int x) {
         boolean notPosX = Integer.toString(x).startsWith("-");
         if (!notPosX) {
