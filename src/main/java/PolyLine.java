@@ -1,15 +1,12 @@
 import java.util.Arrays;
 
-public class PolyLine {
-    //    массив Точек, через которые линия проходит
+public class PolyLine implements Measurable {
     protected Dot[] dots;
 
-    //    При создании объекта можно ничего не указывать, или указать начальный набор Точек
     public PolyLine(Dot... dots) {
         this.dots = dots;
     }
 
-    //    Может вернуть массив Линий (getLines)
     public Line[] getLines() {
         if (dots.length < 2) {
             return new Line[0];
@@ -21,13 +18,13 @@ public class PolyLine {
         return lines;
     }
 
-    //    Может вернуть свою длину (getLength)
-    public int getLength() {
+    @Override
+    public Double getLength() {
         if (dots.length < 2) {
-            return 0;
+            return (double) 0;
         }
 
-        int sumLengthPolyLine = 0;
+        Double sumLengthPolyLine = 0.00;
         Line[] lines = getLines();
         for (Line line : lines) {
             sumLengthPolyLine += line.getLength();
@@ -35,8 +32,6 @@ public class PolyLine {
         return sumLengthPolyLine;
     }
 
-    //    Может быть приведена к строковой форме вида “Линия [Т1,T2,…,TN]”,
-    //    где TN – это результат приведения к строке Точки с номером N
     @Override
     public String toString() {
         return "Линия " + Arrays.toString(dots);

@@ -1,4 +1,4 @@
-public final class Fraction {
+public final class Fraction extends Number {
     private final int numerator;
     private final int denominator;
 
@@ -8,6 +8,26 @@ public final class Fraction {
         }
         this.numerator = numerator;
         this.denominator = denominator;
+    }
+
+    @Override
+    public int intValue() {
+        return numerator / denominator;
+    }
+
+    @Override
+    public long longValue() {
+        return (long) numerator / denominator;
+    }
+
+    @Override
+    public float floatValue() {
+        return (float) numerator / denominator;
+    }
+
+    @Override
+    public double doubleValue() {
+        return (double) numerator / denominator;
     }
 
     public int getNumerator() {
@@ -24,6 +44,14 @@ public final class Fraction {
                 + numerator
                 + "/"
                 + denominator;
+    }
+
+    public static double sumAll(Number... numbers) {
+        double sumAll = 0.0;
+        for (Number number : numbers) {
+            sumAll += number.doubleValue();
+        }
+        return sumAll;
     }
 
     public Fraction sum(Fraction otherFraction) {

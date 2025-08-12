@@ -3,11 +3,12 @@ public class ClosedPolyLine extends PolyLine {
         super(dots);
     }
 
-    public int getLength() {
+    @Override
+    public Double getLength() {
         if (dots.length < 2) {
-            return 0;
+            return (double) 0;
         }
-        int sumLengthPolyLine = super.getLength();
+        Double sumLengthPolyLine = super.getLength();
 
         int legStart = dots[dots.length - 1].getX() - dots[0].getX();
         int legEnd = dots[dots.length - 1].getY() - dots[0].getY();

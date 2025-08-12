@@ -1,4 +1,4 @@
-public class Line {
+public class Line implements Measurable{
     private Dot start;
     private Dot end;
 
@@ -32,6 +32,7 @@ public class Line {
         return "Линия от " + start + " до " + end;
     }
 
+    @Override
     public Double getLength() {
         int leg1 = end.getX() - start.getX();
         int leg2 = end.getY() - start.getY();
