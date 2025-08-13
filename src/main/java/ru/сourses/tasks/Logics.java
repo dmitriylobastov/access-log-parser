@@ -1,3 +1,4 @@
+package ru.сourses.tasks;
 import java.util.Arrays;
 
 public class Logics {

@@ -1,3 +1,4 @@
+package ru.сourses.geometry;
 public class Dot {
     protected int x;
     protected int y;
