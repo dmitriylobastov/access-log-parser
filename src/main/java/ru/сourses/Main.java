@@ -1,5 +1,3 @@
-package ru.сourses;
-
 import ru.сourses.tasks.Fraction;
 
 public class Main {
