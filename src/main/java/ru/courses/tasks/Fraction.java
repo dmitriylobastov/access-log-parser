@@ -1,4 +1,4 @@
-package ru.сourses.tasks;
+package ru.courses.tasks;
 public final class Fraction extends Number {
     private final int numerator;
     private final int denominator;

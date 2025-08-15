@@ -1,5 +1,4 @@
-package ru.сourses.tasks;
-import java.util.Arrays;
+package ru.courses.tasks;
 
 public class Logics {
     public static int[] add(int[] arr, int[] ins, int pos) {

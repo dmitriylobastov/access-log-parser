@@ -1,4 +1,4 @@
-package ru.сourses.tasks;
+package ru.courses.tasks;
 public class Color {
     int r,g,b;
 

@@ -1,4 +1,4 @@
-package ru.сourses.tasks;
+package ru.courses.tasks;
 import java.util.ArrayList;
 import java.util.List;
 

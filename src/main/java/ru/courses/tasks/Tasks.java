@@ -1,4 +1,4 @@
-package ru.сourses.tasks;
+package ru.courses.tasks;
 import java.util.Scanner;
 
 public class Tasks {

@@ -1,4 +1,4 @@
-package ru.сourses.geometry;
+package ru.courses.geometry;
 public class ClosedPolyLine extends PolyLine {
     public ClosedPolyLine(Dot... dots) {
         super(dots);

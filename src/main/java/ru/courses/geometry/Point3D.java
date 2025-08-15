@@ -1,4 +1,4 @@
-package ru.сourses.geometry;
+package ru.courses.geometry;
 public class Point3D extends Dot {
     private int z;
 

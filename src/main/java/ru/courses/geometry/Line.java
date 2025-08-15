@@ -1,4 +1,4 @@
-package ru.сourses.geometry;
+package ru.courses.geometry;
 public class Line implements Measurable{
     private Dot start;
     private Dot end;
