@@ -8,6 +8,20 @@ public class PolyLine implements Measurable {
         this.dots = dots;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        PolyLine polyLine = (PolyLine) obj;
+        return Arrays.equals(dots, polyLine.dots);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(dots);
+    }
+
     public Line[] getLines() {
         if (dots.length < 2) {
             return new Line[0];

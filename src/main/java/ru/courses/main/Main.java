@@ -1,22 +1,8 @@
 import ru.courses.geometry.Dot;
-import ru.courses.geometry.Line;
+import ru.courses.geometry.PolyLine;
 
 public class Main {
     public static void main(String[] args) {
-        Dot p1 = new Dot(1, 2);
-        Dot p2 = new Dot(3, 4);
-        Line original = new Line(p1, p2);
-
-// Клонирование
-        Line cloned = original.clone();
-
-// Проверка равенства
-        System.out.println(original.equals(cloned)); // true
-        System.out.println(original == cloned); // false (это разные объекты)
-
-// Проверка глубокого копирования
-        System.out.println(original.getStart() == cloned.getStart()); // false
-        System.out.println(original.getStart().equals(cloned.getStart())); // true
         System.out.println(" ");
     }
 }
