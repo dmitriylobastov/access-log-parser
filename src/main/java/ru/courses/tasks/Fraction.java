@@ -47,14 +47,6 @@ public final class Fraction extends Number {
                 + denominator;
     }
 
-    public static double sumAll(Number... numbers) {
-        double sumAll = 0.0;
-        for (Number number : numbers) {
-            sumAll += number.doubleValue();
-        }
-        return sumAll;
-    }
-
     public Fraction sum(Fraction otherFraction) {
         return new Fraction(
                 this.numerator * otherFraction.getDenominator()
