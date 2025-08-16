@@ -1,7 +1,30 @@
 package ru.courses.geometry;
-public class Dot {
+
+public class Dot implements Cloneable {
     protected int x;
     protected int y;
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Dot dot = (Dot) obj;
+        return x == dot.x && y == dot.y;
+    }
+
+    @Override
+    public int hashCode() {
+        return 31 * x + y;
+    }
+
+    @Override
+    public Dot clone() {
+        try {
+            return (Dot) super.clone();
+        } catch (CloneNotSupportedException ex) {
+            throw new RuntimeException("Неуспешное клонирование объекта", ex);
+        }
+    }
 
     public Dot(int x, int y) {
         this.x = x;
@@ -16,9 +39,8 @@ public class Dot {
         return y;
     }
 
-    public boolean setX(int x) {
+    public void setX(int x) {
         this.x = x;
-        return false;
     }
 
     public void setY(int y) {
@@ -30,4 +52,3 @@ public class Dot {
         return "{" + x + ";" + y + "}";
     }
 }
-

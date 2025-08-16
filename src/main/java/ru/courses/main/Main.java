@@ -1,29 +1,6 @@
-import ru.courses.tasks.Fraction;
-
-import static ru.courses.tasks.SumAll.sumAll;
-
 public class Main {
     public static void main(String[] args) {
-        int num1 = 2;
-        Fraction num2 = new Fraction(3, 5);
-        Double num3 = 2.3;
-
-        Double num4 = 3.6;
-        Fraction num5 = new Fraction(49, 12);
-        int num6 = 3;
-        Fraction num7 = new Fraction(3, 2);
-
-        Fraction num8 = new Fraction(1, 3);
-        int num9 = 1;
-
-        double result1 = sumAll(num1, num2, num3);
-        System.out.println("Результат сложения выражения 1: " + result1);
-
-        double result2 = sumAll(num4, num5, num6, num7);
-        System.out.println("Результат сложения выражения 2: " + result2);
-
-        double result3 = sumAll(num8, num9);
-        System.out.println("Результат сложения выражения 3: " + result3);
+        System.out.println(" ");
     }
 }
 
